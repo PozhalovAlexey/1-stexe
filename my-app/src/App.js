@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Header from "./components/Header/Header";
 import { NewsList } from "./components/Main/NewsList/NewsList";
+import { TrendsList } from "./components/Main/Trends/TrendsList";
 
 const App = () => {
   return (
@@ -69,85 +70,7 @@ const App = () => {
         <section className="trends">
           <h2 className="section__title">Сейчас в тренде</h2>
           <div className="trends__wrapper">
-            <div className="trends__item__wrapper trends__interior">
-              <div className="trends__item">
-                <ul className="tags">
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Lifestyle
-                    </a>
-                  </li>
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Interior
-                    </a>
-                  </li>
-                </ul>
-                <h2 className="trends__title">
-                  <a className="trends__title__link">
-                    Сейчас в тренде: сад на подоконнике
-                  </a>
-                </h2>
-              </div>
-            </div>
-            <div className="trends__item__wrapper trends__food">
-              <div className="trends__item">
-                <ul className="tags">
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      food
-                    </a>
-                  </li>
-                </ul>
-                <h2 className="trends__title">
-                  <a className="trends__title__link">
-                    Cыры на красивых картинках из интернета: какие они на вкус?
-                  </a>
-                </h2>
-              </div>
-            </div>
-            <div className="trends__item__wrapper trends__travel">
-              <div className="trends__item">
-                <ul className="tags">
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Lifestyle
-                    </a>
-                  </li>
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Travel
-                    </a>
-                  </li>
-                </ul>
-                <h2 className="trends__title">
-                  <a className="trends__title__link">
-                    Собираемся в первый поход в горы
-                  </a>
-                </h2>
-              </div>
-            </div>
-            <div className="trends__item__wrapper trends__health">
-              <div className="trends__item">
-                <ul className="tags">
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Food
-                    </a>
-                  </li>
-                  <li className="tags__item">
-                    <a className="tags__item__link" href="/">
-                      Health
-                    </a>
-                  </li>
-                </ul>
-                <h2 className="trends__title">
-                  <a className="trends__title__link">
-                    Сейчас в тренде: сколько витамина в лимонах?
-                  </a>
-                </h2>
-              </div>
-            </div>
+            <TrendsList />
           </div>
         </section>
         <div className="wrapper__page__container container">
