@@ -10,8 +10,8 @@ export const News = ({ item }) => {
       <div className="news__content">
         <header className="news__content__header">
           <ul className="news__content__tags">
-            {tags.map(({ name, link }) => (
-              <li className="news__tags__item">
+            {tags.map(({ name, link, id }) => (
+              <li key={id} className="news__tags__item">
                 <a href={link} className="news__tags__link">
                   {name}
                 </a>

@@ -3,10 +3,22 @@ import React from "react";
 import Header from "./components/Header/Header";
 import { NewsList } from "./components/Main/NewsList/NewsList";
 import { TrendsList } from "./components/Main/Trends/TrendsList";
+import { SideSectionPosts } from "./components/Main/SideColumn/SideSectionPosts/SideSectionPosts";
+import { TagsList } from "./components/Main/SideColumn/Tags/TagsList";
+import { ThemesList } from "./components/Main/SideColumn/Themes/ThemesList";
+// import styled from "@emotion/styled";
+
+// const TestDiv = styled.div`
+//   background: ${(props) => (props.isBlack ? "black" : "yellow")};
+//   width: 100px;
+//   height: 100px;
+// `;//!!!!!!!!!!!Следующие уроки by OLeg
 
 const App = () => {
+  // const isBlack = false;
   return (
     <>
+      {/*<TestDiv isBlack={isBlack}>TESTETSTE</TestDiv>*/}
       <Header />
 
       <main className="page">
@@ -80,76 +92,7 @@ const App = () => {
           <aside className="side__column">
             <section className="side__sections">
               <h2 className="side__title">Новые посты</h2>
-              <article className="new__posts">
-                <div className="new__posts__img">
-                  <img src="image/2.jpg" alt="Силуэт на пляже" />
-                </div>
-                <div className="new__content">
-                  <time className="new__posts__date">14 июня 2019</time>
-                  <h3 className="new__posts__content">
-                    <a href="/" className="new__posts__link">
-                      {" "}
-                      10 мест, ради которых стоит проснуться
-                    </a>
-                  </h3>
-                </div>
-              </article>
-              <article className="new__posts">
-                <div className="new__posts__img">
-                  <img src="image/151.jpg" alt="Девушка занимается йогой" />
-                </div>
-                <div className="new__content">
-                  <time className="new__posts__date">14 июня 2019</time>
-                  <h3 className="new__posts__content">
-                    <a href="/" className="new__posts__link">
-                      {" "}
-                      Йога для домашних
-                    </a>
-                  </h3>
-                </div>
-              </article>
-              <article className="new__posts">
-                <div className="new__posts__img">
-                  <img src="image/45.jpg" alt="Красивый интерьер балкона" />
-                </div>
-                <div className="new__content">
-                  <time className="new__posts__date">14 июня 2019</time>
-                  <h3 className="new__posts__content">
-                    <a href="/" className="new__posts__link">
-                      {" "}
-                      Как мы превратили классное место в балкон
-                    </a>
-                  </h3>
-                </div>
-              </article>
-              <article className="new__posts">
-                <div className="new__posts__img">
-                  <img src="image/501.jpg" alt="Красивые блюда" />
-                </div>
-                <div className="new__content">
-                  <time className="new__posts__date">14 июня 2019</time>
-                  <h3 className="new__posts__content">
-                    <a href="/" className="new__posts__link">
-                      {" "}
-                      Кулинарный подход к науке
-                    </a>
-                  </h3>
-                </div>
-              </article>
-              <article className="new__posts">
-                <div className="new__posts__img">
-                  <img src="image/7.jpg" alt="Прически девушек" />
-                </div>
-                <div className="new__content">
-                  <time className="new__posts__date">14 июня 2019</time>
-                  <h3 className="new__posts__content">
-                    <a href="/" className="new__posts__link">
-                      {" "}
-                      Лучшие прически для распущенных волос
-                    </a>
-                  </h3>
-                </div>
-              </article>
+              <SideSectionPosts />
             </section>
             <section className="side__sections">
               <form className="search__form" action="/">
@@ -189,88 +132,13 @@ const App = () => {
             <section className="side__sections">
               <h2 className="side__title">Теги</h2>
               <ul className="tag__list">
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Fashion
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Music
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Lifestyle
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Art
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Interior
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Travel
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Food
-                  </a>
-                </li>
-                <li className="tag__list__item">
-                  <a href="/" className="tag__list__link">
-                    Health
-                  </a>
-                </li>
+                <TagsList />
               </ul>
             </section>
-
             <section className="side__sections">
               <h2 className="side__title">Темы</h2>
               <ul className="categories__list">
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Красота
-                  </a>
-                  <sup className="categories__list__count">12</sup>
-                </li>
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Здоровье
-                  </a>
-                  <sup className="categories__list__count">4</sup>
-                </li>
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Образ жизни
-                  </a>
-                  <sup className="categories__list__count">145</sup>
-                </li>
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Музыка
-                  </a>
-                  <sup className="categories__list__count">28</sup>
-                </li>
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Спорт
-                  </a>
-                  <sup className="categories__list__count">62</sup>
-                </li>
-                <li className="categories__list__item">
-                  <a className="categories__list__item__link" href="/">
-                    Йога
-                  </a>
-                  <sup className="categories__list__count">8</sup>
-                </li>
+                <ThemesList />
               </ul>
             </section>
           </aside>
@@ -353,6 +221,7 @@ const App = () => {
                     Интерьерная рукодельная кукла «Зайчик», созданию которой
                     посвящена
                     <a className="product__info__link" href="/">
+                      {" "}
                       весенняя серия постов
                     </a>{" "}
                     в блоге и несколько подкастов.
@@ -454,3 +323,14 @@ const App = () => {
 };
 
 export default App;
+
+// перейти на Emotion(Styled-Components)
+//
+//
+//
+//
+//
+//
+//
+//
+//

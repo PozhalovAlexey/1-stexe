@@ -61,7 +61,7 @@ body {
   z-index: -1;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1199px ) {
+@media screen and (min-width: 641px) and (max-width: 1199px) {
   .header {
     padding: 40px 0 125px;
     background-image: url("image/banner-bg-tablet.jpg");
@@ -107,9 +107,8 @@ body {
   .header__line {
     justify-content: flex-end;
   }
-
 }
-.header__logo{
+.header__logo {
   width: 180px;
 }
 @media screen and (min-width: 641px) and (max-width: 1199px) {
@@ -124,7 +123,7 @@ body {
     text-align: center;
     margin: 175px auto 0 auto;
   }
-  .header__line{
+  .header__line {
     align-items: stretch;
   }
 }
@@ -247,7 +246,6 @@ body {
   }
 }
 
-
 /*pop__up*/
 .pop__up {
   position: fixed;
@@ -283,8 +281,8 @@ body {
   }
 }
 
-@media screen and (max-width: 640px){
-  .pop__up__container{
+@media screen and (max-width: 640px) {
+  .pop__up__container {
     width: 90%;
   }
 }
@@ -308,7 +306,8 @@ body {
   background-size: 8px;
 }
 
-.question__select:hover, .question__select:focus {
+.question__select:hover,
+.question__select:focus {
   outline: 2px solid #b59f5b;
   outline-offset: -1px;
 }
@@ -322,7 +321,7 @@ body {
   display: inline-block;
 }
 
-.radio__group:nth-of-type(n+2) {
+.radio__group:nth-of-type(n + 2) {
   margin-left: 5px;
 }
 
@@ -360,7 +359,8 @@ body {
   border: none;
 }
 
-.form__textarea:hover, .form__textarea:focus {
+.form__textarea:hover,
+.form__textarea:focus {
   outline: 2px solid #b59f5b;
   outline-offset: -1px;
 }
@@ -376,7 +376,8 @@ body {
   color: white;
 }
 
-.send__btn:hover, .send__btn:focus {
+.send__btn:hover,
+.send__btn:focus {
   -webkit-box-shadow: 0 -5px 5px -5px rgba(34, 60, 80, 0.6);
   -moz-box-shadow: 0 -5px 5px -5px rgba(34, 60, 80, 0.6);
   box-shadow: 0 -5px 5px -5px rgba(34, 60, 80, 0.6);
@@ -453,7 +454,6 @@ body {
 .trends__wrapper {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .trends__item {
@@ -514,22 +514,26 @@ body {
 }
 
 .trends__interior {
-  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg") no-repeat center center;
+  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg")
+    no-repeat center center;
   background-size: cover;
 }
 
 .trends__food {
-  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg") no-repeat center center;
+  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg")
+    no-repeat center center;
   background-size: cover;
 }
 
 .trends__travel {
-  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg") no-repeat center center;
+  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg")
+    no-repeat center center;
   background-size: cover;
 }
 
 .trends__health {
-  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg") no-repeat center center;
+  background: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg")
+    no-repeat center center;
   background-size: cover;
 }
 
@@ -562,7 +566,6 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
 }
-
 
 .tags__item__link:hover {
   color: #b59f5b;
@@ -643,7 +646,6 @@ ul {
   .news {
     display: block;
   }
-
 }
 
 @media screen and (max-width: 640px) {
@@ -722,7 +724,6 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .news__tags__item:nth-last-child(n + 2) {
   margin-right: 20px;
@@ -829,7 +830,6 @@ p {
   }
 }
 
-
 /*aside*/
 aside {
   display: block;
@@ -843,7 +843,6 @@ aside {
   .side__column {
     width: 100%;
   }
-
 }
 
 .side__sections:nth-last-child(n + 2) {
@@ -910,7 +909,7 @@ aside {
 
 .new__posts__link:hover {
   color: #b59f5b;
-  transition: 0.2s linear;;
+  transition: 0.2s linear;
 }
 
 /*form*/
@@ -990,7 +989,8 @@ section {
   cursor: pointer;
 }
 
-.subscribe__btn:hover, .subscribe__btn:focus {
+.subscribe__btn:hover,
+.subscribe__btn:focus {
   outline: 2px solid #b59f5b;
   outline-offset: -2px;
 }
@@ -1209,7 +1209,6 @@ a {
   box-shadow: inset 0 0 0 2px rgba(91, 91, 83, 0.45);
 }
 
-
 /*footer*/
 .footer {
   margin-top: 65px;
@@ -1294,13 +1293,13 @@ a {
   text-align: center;
 }
 
-@media screen  and (min-width: 641px) and (max-width: 1199px) {
+@media screen and (min-width: 641px) and (max-width: 1199px) {
   .copyright {
     margin-top: 50px;
   }
 }
 
-@media screen  and (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .copyright {
     margin-top: 50px;
   }

@@ -18,10 +18,12 @@ const newsList = [
     author: "Неизвестный автор",
     tags: [
       {
+        id: 1,
         name: "travel",
         link: "",
       },
       {
+        id: 2,
         name: "health",
         link: "",
       },
@@ -38,10 +40,14 @@ const newsList = [
     author: "Неизвестный автор",
     tags: [
       {
+        id: 1,
+
         name: "health",
         link: "",
       },
       {
+        id: 2,
+
         name: "lifestyle",
         link: "",
       },
@@ -61,10 +67,12 @@ const newsList = [
     author: "Неизвестный автор",
     tags: [
       {
+        id: 1,
         name: "music",
         link: "",
       },
       {
+        id: 2,
         name: "",
         link: "",
       },
@@ -81,10 +89,14 @@ const newsList = [
     author: "Неизвестный автор",
     tags: [
       {
+        id: 1,
+
         name: "lifestyle",
         link: "",
       },
       {
+        id: 2,
+
         name: "food",
         link: "",
       },
@@ -101,17 +113,16 @@ const newsList = [
     author: "Неизвестный автор",
     tags: [
       {
+        id: 1,
         name: "lifestyle",
         link: "",
       },
       {
+        id: 2,
         name: "interior",
         link: "",
       },
-      {
-        name: "art",
-        link: "",
-      },
+      { id: 3, name: "art", link: "" },
     ],
     createDate: "10 июня 2019",
   },
@@ -124,14 +135,8 @@ const newsList = [
       "Для начала нужно определиться, в каком формате пройдёт ваше путешествие. Это зависит от многих факторов, не только от ваших желаний и интересов.?",
     author: "Неизвестный автор",
     tags: [
-      {
-        name: "travel",
-        link: "",
-      },
-      {
-        name: "lifestyle",
-        link: "",
-      },
+      { id: 1, name: "travel", link: "" },
+      { id: 2, name: "lifestyle", link: "" },
     ],
     createDate: "10 июня 2019",
   },
@@ -144,14 +149,8 @@ const newsList = [
       "Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.",
     author: "Неизвестный автор",
     tags: [
-      {
-        name: "lifestyle",
-        link: "",
-      },
-      {
-        name: "food",
-        link: "",
-      },
+      { id: 1, name: "lifestyle", link: "" },
+      { id: 2, name: "food", link: "" },
     ],
     createDate: "10 июня 2019",
   },
