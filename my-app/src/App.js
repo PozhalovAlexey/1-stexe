@@ -6,6 +6,7 @@ import { TrendsList } from "./components/Main/Trends/TrendsList";
 import { SideSectionPosts } from "./components/Main/SideColumn/SideSectionPosts/SideSectionPosts";
 import { TagsList } from "./components/Main/SideColumn/Tags/TagsList";
 import { ThemesList } from "./components/Main/SideColumn/Themes/ThemesList";
+import { ProductsList } from "./components/Main/ProductsList/ProductsList";
 // import styled from "@emotion/styled";
 
 // const TestDiv = styled.div`
@@ -146,138 +147,7 @@ const App = () => {
         <section className="product container">
           <h2 className="section__title">Наши изделия</h2>
           <div className="products__list">
-            <div className="product__wrapper">
-              <div className="product__image__wrapper">
-                <picture>
-                  <source
-                    srcSet="image/shop-item-desk1.jpg"
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-tablet1.jpg"
-                    media="(min-width: 641px) and (max-width: 1199px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-mobile1.jpg"
-                    media="(max-width: 640px)"
-                  />
-                  <img
-                    className="product__image"
-                    src="image/shop-item-desk1.jpg"
-                    alt=""
-                  />
-                </picture>
-              </div>
-              <div className="product__text">
-                <h2 className="section__title section__title__product">
-                  Подушки на диван
-                </h2>
-                <div className="product__text__description">
-                  <p className="product__info">
-                    Набор из двух подушек с модными принтами. Видео о создании{" "}
-                    <a className="product__info__link" href="/">
-                      здесь
-                    </a>
-                    .
-                  </p>
-                </div>
-                <div className="product__price">
-                  <div className="price__wrapper">
-                    <p className="old__price">1000 ₽</p>
-                    <p className="new__price">800 ₽</p>
-                  </div>
-                  <button className="btn__link">В магазин</button>
-                </div>
-              </div>
-            </div>
-            <div className="product__wrapper">
-              <div className="product__image__wrapper">
-                <picture>
-                  <source
-                    srcSet="image/shop-item-desk2.jpg"
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-tablet2.jpg"
-                    media="(min-width: 641px) and (max-width: 1199px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-mobile2.jpg"
-                    media="(max-width: 640px)"
-                  />
-                  <img
-                    className="product__image"
-                    src="image/shop-item-desk2.jpg"
-                    alt=""
-                  />
-                </picture>
-              </div>
-              <div className="product__text">
-                <h2 className="section__title section__title__product">
-                  Кукла «Зайчик»
-                </h2>
-                <div className="product__text__description">
-                  <p className="product__info">
-                    Интерьерная рукодельная кукла «Зайчик», созданию которой
-                    посвящена
-                    <a className="product__info__link" href="/">
-                      {" "}
-                      весенняя серия постов
-                    </a>{" "}
-                    в блоге и несколько подкастов.
-                  </p>
-                </div>
-                <div className="product__price">
-                  <div className="price__wrapper">
-                    <p className="new__price">3500 ₽</p>
-                  </div>
-                  <button className="btn__link">В магазин</button>
-                </div>
-              </div>
-            </div>
-            <div className="product__wrapper">
-              <div className="product__image__wrapper">
-                <picture>
-                  <source
-                    srcSet="image/shop-item-desk3.jpg"
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-tablet3.jpg"
-                    media="(min-width: 641px) and (max-width: 1199px)"
-                  />
-                  <source
-                    srcSet="image/shop-item-mobile3.jpg"
-                    media="(max-width: 640px)"
-                  />
-                  <img
-                    className="product__image"
-                    src="image/shop-item-desk3.jpg"
-                    alt=""
-                  />
-                </picture>
-              </div>
-              <div className="product__text">
-                <h2 className="section__title section__title__product">
-                  Шестиугольная рамка
-                </h2>
-                <div className="product__text__description">
-                  <p className="product__info">
-                    Необычная рамка для украшения дома из видео{" "}
-                    <a className="product__info__link" href="/">
-                      «Как сделать рамку из подручных средств за 30 минут»{" "}
-                    </a>
-                  </p>
-                </div>
-                <div className="product__price">
-                  <div className="price__wrapper">
-                    <p className="old__price">500 ₽</p>
-                    <p className="new__price">400 ₽</p>
-                  </div>
-                  <button className="btn__link">В магазин</button>
-                </div>
-              </div>
-            </div>
+            <ProductsList />
           </div>
         </section>
       </main>
