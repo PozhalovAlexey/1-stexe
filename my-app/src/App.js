@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import { NewsList } from "./components/Main/NewsList/NewsList";
 import { TrendsList } from "./components/Main/Trends/TrendsList";
@@ -7,6 +7,8 @@ import { SideSectionPosts } from "./components/Main/SideColumn/SideSectionPosts/
 import { TagsList } from "./components/Main/SideColumn/Tags/TagsList";
 import { ThemesList } from "./components/Main/SideColumn/Themes/ThemesList";
 import { ProductsList } from "./components/Main/ProductsList/ProductsList";
+import { TagsContext } from "./context/TagsContext";
+import Footer from "./components/Footer/Footer";
 // import styled from "@emotion/styled";
 
 // const TestDiv = styled.div`
@@ -16,9 +18,10 @@ import { ProductsList } from "./components/Main/ProductsList/ProductsList";
 // `;//!!!!!!!!!!!Следующие уроки by OLeg
 
 const App = () => {
+  const [selectedTags, setSelectedTags] = useState([]);
   // const isBlack = false;
   return (
-    <>
+    <TagsContext.Provider value={{ selectedTags, setSelectedTags }}>
       {/*<TestDiv isBlack={isBlack}>TESTETSTE</TestDiv>*/}
       <Header />
 
@@ -151,44 +154,8 @@ const App = () => {
           </div>
         </section>
       </main>
-      <footer className="footer container">
-        <div className="wrapper">
-          <address className="socials__footer">
-            <ul className="social__lists">
-              <li className="social__item">
-                <a
-                  href="/"
-                  className="social__link social__item__link__dribbble"
-                >
-                  <span className="social__link__name">dribbble</span>
-                </a>
-              </li>
-              <li className="social__item">
-                <a
-                  href="/"
-                  className="social__link social__item__link__pinterest"
-                >
-                  <span className="social__link__name">pinterest</span>
-                </a>
-              </li>
-              <li className="social__item">
-                <a
-                  href="/"
-                  className="social__link social__item__link__tumbler"
-                >
-                  <span className="social__link__name">tumbler</span>
-                </a>
-              </li>
-            </ul>
-          </address>
-          <div className="copyright">
-            <a href="/" className="copyright__link">
-              Copyright © 2009–2019 City Blog LLC.
-            </a>
-          </div>
-        </div>
-      </footer>
-    </>
+      <Footer />
+    </TagsContext.Provider>
   );
 };
 

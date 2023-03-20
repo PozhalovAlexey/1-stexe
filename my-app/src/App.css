@@ -1009,6 +1009,13 @@ section {
   margin-right: 5px;
   margin-bottom: 6px;
   border: 3px solid #eeeeee;
+  cursor: pointer;
+}
+.tag__list__item__selected {
+  margin-right: 5px;
+  margin-bottom: 6px;
+  border: 3px solid #b59f5b;
+  cursor: pointer;
 }
 
 .tag__list__link {

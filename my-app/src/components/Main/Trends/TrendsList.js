@@ -1,5 +1,5 @@
-import React from "react";
-import { Trends } from "./Trends";
+import React, { useState } from "react";
+import { Trend } from "./Trend";
 
 const trendsList = [
   {
@@ -69,10 +69,12 @@ const trendsList = [
 ];
 
 export const TrendsList = () => {
+  const [trends, setTrends] = useState(trendsList);
+
   return (
     <>
-      {trendsList.map((trends) => (
-        <Trends key={trends.id} item={trends} />
+      {trends.map((trend) => (
+        <Trend key={trend.id} item={trend} />
       ))}
     </>
   );

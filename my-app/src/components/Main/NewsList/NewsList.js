@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import lastPost1 from "../../../image/last-post1.jpg";
 import lastPost2 from "../../../image/last-post2.jpg";
 import lastPost3 from "../../../image/last-post3.jpg";
@@ -7,6 +7,7 @@ import lastPost5 from "../../../image/last-post5.jpg";
 import lastPost6 from "../../../image/last-post6.jpg";
 import lastPost7 from "../../../image/last-post4.jpg";
 import { News } from "./News";
+import { TagsContext } from "../../../context/TagsContext";
 const newsList = [
   {
     id: 1,
@@ -157,9 +158,23 @@ const newsList = [
 ];
 
 export const NewsList = () => {
+  const [news, setNews] = useState(newsList);
+  const { selectedTags } = useContext(TagsContext);
+  console.log(selectedTags, "selectedTAgs news");
+  const renderNewsWithSelectedTags = () => {
+    setNews(
+      news.filter((e) =>
+        e.tags.map((tag) => selectedTags.includes(tag.name.toLowerCase()))
+      )
+    );
+  };
+  useEffect(() => {
+    renderNewsWithSelectedTags();
+  }, [selectedTags]);
+  // console.log(selectedTags, "NewsListTags");
   return (
     <>
-      {newsList.map((news) => (
+      {news.map((news) => (
         <News key={news.id} item={news} />
       ))}
     </>

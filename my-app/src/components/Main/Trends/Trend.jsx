@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../App.css";
-export const Trends = ({ item }) => {
+export const Trend = ({ item }) => {
   const { link, name, title, tags, cssClass } = item;
   const cssClasses = `trends__item__wrapper ${cssClass}`;
   return (

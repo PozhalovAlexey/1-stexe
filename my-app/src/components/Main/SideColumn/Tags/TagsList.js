@@ -1,5 +1,5 @@
 import React from "react";
-import { Tags } from "./Tags";
+import { Tag } from "./Tag";
 
 const tagsList = [
   {
@@ -47,8 +47,8 @@ const tagsList = [
 export const TagsList = () => {
   return (
     <>
-      {tagsList.map((tags) => (
-        <Tags key={tags.id} item={tags} />
+      {tagsList.map((tag) => (
+        <Tag key={tag.id} item={tag} />
       ))}
     </>
   );
