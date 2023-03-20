@@ -41,7 +41,7 @@ const DarkMode = () => {
     </div>
   );
 };
-//
+//по useEffect useState useContext задать вопросы!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // const theme = () => {
 //   createTheme({
 //     palette: {
