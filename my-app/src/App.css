@@ -463,7 +463,6 @@ body {
 }
 
 .trends__item__wrapper {
-  display: flex;
   align-items: flex-end;
   flex-grow: 1;
   padding: 8% 20px 20px;

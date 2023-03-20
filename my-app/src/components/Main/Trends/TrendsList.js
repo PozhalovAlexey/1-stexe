@@ -69,7 +69,7 @@ const trendsList = [
 ];
 
 export const TrendsList = () => {
-  const [trends, setTrends] = useState(trendsList);
+  const [trends] = useState(trendsList);
 
   return (
     <>

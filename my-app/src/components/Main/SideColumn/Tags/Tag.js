@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { TagsContext } from "../../../../context/TagsContext";
 
 export const Tag = ({ item }) => {
-  const { title, /link/ } = item;
+  const { title } = item;
   const { selectedTags, setSelectedTags } = useContext(TagsContext);
 
   // const [isSelected, setSelected] = useState(false);
