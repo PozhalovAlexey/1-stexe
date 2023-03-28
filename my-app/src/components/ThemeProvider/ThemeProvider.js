@@ -1,57 +1,36 @@
-// import React, { useContext, useState } from "react";
-//import { createTheme } from "@material-ui/core";
+import React, { useState } from "react";
+import styled from "styled-components";
 
-// import(createTheme(useContext(primary, secondary)));
-// import { Header } from "../Header";
-//
-// const ThemeContext = createTheme({ type: "Light" });
-//
-// export const ThemeProvider = ({ children }) => {
-//   const [type, setType] = useState("Light");
-//   return (
-//     <ThemeContext.Provider value={{ type, setType }}>
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// };
+const theme = {
+  dark: {
+    textColor: "white",
+    background: "black",
+  },
+  light: {
+    textColor: "black",
+    background: "white",
+  },
+};
+const Button = styled.button`
+  background: ${(props) =>
+    props.isDarkmode ? theme.dark.background : theme.light.background};
+  color: ${(props) =>
+    props.isDarkmode ? theme.dark.textColor : theme.light.textColor};
 
-const DarkMode = () => {
-  const setDarkMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "dark");
-  };
-  const setLightMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "light");
-  };
-
-  const toggleTheme = (e) => {
-    if (e.target.checked) setDarkMode();
-    else setLightMode();
-  };
+  height: 150px;
+`;
+export const App = () => {
+  const [isDarkmode, setIsDarkMode] = useState(false);
   return (
-    <div className={"dark__mode"}>
-      <input
-        className={"dark__mode__input"}
-        type={"checkbox"}
-        id={"darkmode__toggle"}
-        onChange={toggleTheme}
-      />
-      <label
-        className={"dark__mode__label"} /* for={"darkmode__toggle"} */
-      ></label>
-    </div>
+    <>
+      <Button isDarkmode={isDarkmode}>12312312</Button>
+      <button
+        onClick={() => {
+          setIsDarkMode(!isDarkmode);
+        }}
+      >
+        Сменить тему
+      </button>
+    </>
   );
 };
-//по useEffect useState useContext задать вопросы!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// const theme = () => {
-//   createTheme({
-//     palette: {
-//       primary: {
-//         backgroundColor: "#fff",
-//       },
-//       secondary: {
-//         backgroundColor: "#222",
-//       },
-//     },
-//   });
-// };
-// export default theme;

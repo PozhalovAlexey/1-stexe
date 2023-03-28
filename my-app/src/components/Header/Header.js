@@ -1,7 +1,7 @@
 import React from "react";
 import { NavList } from "./NavList";
 
-const Header = () => {
+const Header = ({ setVisibleFeedbackModal, setIsVisibleSidebar }) => {
   return (
     <header className="header">
       <div className="container">
@@ -15,10 +15,27 @@ const Header = () => {
             </a>
           </div>
           <nav className="nav">
-            <button className="menu__burger">
+            <button
+              className="menu__burger"
+              onClick={() => setIsVisibleSidebar(true)}
+            >
               <span className="menu__burger__name">Открыть меню</span>
             </button>
-            <NavList />
+            <NavList isFromSidebar={false} />
+            <button
+              className="send__btn"
+              style={{
+                width: 150,
+                height: 34,
+                borderRadius: 16,
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+              }}
+              onClick={() => setVisibleFeedbackModal(true)}
+            >
+              Ваш фидбэк
+            </button>
           </nav>
         </div>
 

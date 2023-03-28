@@ -34,12 +34,15 @@ const navItems = [
   },
 ];
 
-export const NavList = () => {
+export const NavList = ({ isFromSidebar }) => {
+  const classes = ` ${isFromSidebar && "nav__list__from__sidebar"}`;
   return (
-    <ul className="nav__list">
-      {navItems.map(({ name, link, id }) => (
-        <ListItem name={name} link={link} key={id} />
-      ))}
-    </ul>
+    <div className={classes}>
+      <ul className="nav__list">
+        {navItems.map(({ name, link, id }) => (
+          <ListItem name={name} link={link} key={id} />
+        ))}
+      </ul>
+    </div>
   );
 };

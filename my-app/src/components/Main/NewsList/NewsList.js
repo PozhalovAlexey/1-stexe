@@ -158,20 +158,20 @@ const newsList = [
 ];
 
 export const NewsList = () => {
-  const [news, setNews] = useState(newsList);
+  const [news, setNews] = useState([]);
   const { selectedTags } = useContext(TagsContext);
-  console.log(selectedTags, "selectedTAgs news");
-  const renderNewsWithSelectedTags = () => {
-    setNews(
-      news.filter((e) =>
-        e.tags.map((tag) => selectedTags.includes(tag.name.toLowerCase()))
-      )
-    );
-  };
+
   useEffect(() => {
-    renderNewsWithSelectedTags();
+    if (selectedTags.length === 0) {
+      setNews(newsList);
+      return;
+    }
+    const filteredNews = news.filter((e) =>
+      e.tags.map((t) => t.name).some((s) => selectedTags.includes(s))
+    );
+
+    setNews(filteredNews);
   }, [selectedTags]);
-  // console.log(selectedTags, "NewsListTags");
   return (
     <>
       {news.map((news) => (

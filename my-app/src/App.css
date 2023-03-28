@@ -108,9 +108,11 @@ body {
     justify-content: flex-end;
   }
 }
+
 .header__logo {
   width: 180px;
 }
+
 @media screen and (min-width: 641px) and (max-width: 1199px) {
   .header__logo {
     width: 160px;
@@ -123,6 +125,7 @@ body {
     text-align: center;
     margin: 175px auto 0 auto;
   }
+
   .header__line {
     align-items: stretch;
   }
@@ -136,7 +139,7 @@ body {
 @media screen and (max-width: 1199px) {
   .menu__burger {
     display: block;
-    width: 1.3em;
+    width: 1.4em;
     height: 1em;
     border: none;
     position: relative;
@@ -145,9 +148,7 @@ body {
     cursor: pointer;
     text-indent: -9999px;
   }
-}
 
-@media screen and (max-width: 1199px) {
   .menu__burger:before {
     top: 0;
   }
@@ -155,9 +156,7 @@ body {
   .menu__burger:after {
     bottom: 0;
   }
-}
 
-@media screen and (max-width: 1199px) {
   .menu__burger:before,
   .menu__burger:after {
     content: "";
@@ -182,7 +181,9 @@ body {
 }
 
 .nav {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__list {
@@ -191,6 +192,15 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav__list__from__sidebar .nav__list {
+  display: flex;
+  flex-direction: column;
+}
+.nav__list__from__sidebar ul.nav__list {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav__item {
@@ -260,7 +270,13 @@ body {
   align-items: center;
 }
 
-.visually__hidden {
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visually__hidden__pop__up {
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1010,6 +1026,7 @@ section {
   border: 3px solid #eeeeee;
   cursor: pointer;
 }
+
 .tag__list__item__selected {
   margin-right: 5px;
   margin-bottom: 6px;
